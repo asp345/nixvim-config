@@ -15,21 +15,21 @@
             icon = " ";
             title = "Keymaps";
             section = "keys";
-            gap = 1;
+            gap = 5;
             padding = 1;
           }
           {
             icon = " ";
             title = "Find Files";
             __unkeyed-1.__raw = "require('snacks').dashboard.sections.recent_files({cwd = true})";
-            gap = 1;
+            gap = 5;
             padding = 1;
           }
           {
             icon = " ";
             title = "Projects";
             section = "projects";
-            gap = 1;
+            gap = 5;
             padding = 1;
           }
           {
