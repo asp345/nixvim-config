@@ -8,7 +8,7 @@
   };
 
   plugins.treesitter-textobjects = {
-    enable = true;
+    enable = false;
     settings = {
       select = {
         enable = true;
