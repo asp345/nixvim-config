@@ -14,7 +14,7 @@
       auto_scroll = true;
       close_on_exit = true;
       insert_mappings = true;
-      shell = "nu";
+      shell = "zsh";
     };
   };
   keymaps = [
@@ -25,6 +25,19 @@
         "t"
       ];
       action = "<cmd>ToggleTerm<CR>";
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    # New keymap for horizontal split terminal
+    {
+      key = "<leader>th";
+      mode = [
+        "n"
+        "t"
+      ];
+      action = "<cmd>ToggleTerm direction=horizontal size=15<CR>";
       options = {
         silent = true;
         noremap = true;
