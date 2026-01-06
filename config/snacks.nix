@@ -13,24 +13,27 @@
         sections = [
           {
             icon = " ";
-            title = "Keymaps";
+            title = "Keymaps\n";
             section = "keys";
-            gap = 5;
+            indent = 2;
+            gap = 1;
             padding = 1;
           }
           {
             icon = " ";
-            title = "Find Files";
+            title = "Find Files\n";
             __unkeyed-1.__raw = "require('snacks').dashboard.sections.recent_files({cwd = true})";
-            gap = 5;
+            gap = 1;
             padding = 1;
+            indent = 2;
           }
           {
             icon = " ";
-            title = "Projects";
+            title = "Projects\n";
             section = "projects";
-            gap = 5;
+            gap = 1;
             padding = 1;
+            indent = 2;
           }
           {
             pane = 1;
