@@ -2,12 +2,6 @@
 
 This is a personal Neovim configuration written using **Nix Flakes** and powered by [nixvim](https://github.com/nix-community/nixvim). It is heavily inspired by [LazyVim](https://lazyvim.github.io/) and aims to provide a modern, modular, and reproducible setup for Neovim, leveraging the power of the Nix ecosystem.
 
-![Preview Screenshot](/assets/pic8.png)
-
-![Preview Screenshot](/assets/pic9.png)
-
-![Preview Screenshot](/assets/pic11.png)
-
 ---
 
 ## 🚀 Installation
@@ -17,15 +11,15 @@ You can choose one of the following two methods to run this config:
 ### 🔁 Method 1: Clone and use `nix develop`
 
 ```bash
-git clone https://github.com/XhuyZ/nixvim
-cd nixvim
+git clone https://github.com/asp345/nixvim-config
+cd nixvim-config
 nix develop
 ```
 
 ### ⚡ Method 2: For NixOS users `nix profile install`
 
 ```bash
-nix profile install github:XhuyZ/nixvim
+nix profile install github:asp345/nixvim-config
 ```
 
 Once inside the `nix develop` environment, just run:
