@@ -1,7 +1,7 @@
 { ... }:
 {
   colorschemes = {
-    solarized-osaka = {
+    oxocarbon = {
       enable = true;
     };
   };
