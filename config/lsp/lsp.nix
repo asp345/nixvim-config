@@ -19,16 +19,18 @@
       enable = true;
       inlayHints = true;
       servers = {
-        omnisharp = {
+        clangd = {
           enable = true;
+        };
+        rust_analyzer = {
+          enable = true;
+          installCargo = true;
+          installRustc = true;
         };
         superhtml = {
           enable = true;
         };
         sqls = {
-          enable = true;
-        };
-        nushell = {
           enable = true;
         };
         lua_ls = {
@@ -43,7 +45,7 @@
         marksman = {
           enable = true;
         };
-        pyright = {
+        ruff = {
           enable = true;
         };
         gopls = {
@@ -147,38 +149,10 @@
   };
   extraPlugins = with pkgs.vimPlugins; [
     ansible-vim
-    roslyn-nvim
-  ];
-  extraPackages = with pkgs; [
-    roslyn-ls
   ];
 
   extraConfigLua = ''
     local _border = "rounded"
-
-    vim.lsp.config("roslyn", {
-      cmd = {
-        "dotnet",
-        "<target>/Microsoft.CodeAnalysis.LanguageServer.dll",
-        "--logLevel=Information",
-        "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.get_log_path()),
-        "--stdio"
-      },
-      on_attach = function()
-        print("This will run when the server attaches!")
-      end,
-      settings = {
-        csharp = {
-          inlay_hints = {
-            csharp_enable_inlay_hints_for_implicit_object_creation = true,
-            csharp_enable_inlay_hints_for_implicit_variable_types = true
-          },
-          code_lens = {
-            dotnet_enable_references_code_lens = true
-          }
-        }
-      }
-    })
 
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
       vim.lsp.handlers.hover, {
