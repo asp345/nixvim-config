@@ -9,6 +9,7 @@
       # lua
       ''
         local slow_format_filetypes = {}
+        vim.g.disable_autoformat = true
 
         vim.api.nvim_create_user_command("FormatDisable", function(args)
            if args.bang then
@@ -102,6 +103,9 @@
             "black"
             "isort"
           ];
+          rust = [ "rustfmt" ];
+          cpp = [ "clang_format" ];
+          c = [ "clang_format" ];
           lua = [ "stylua" ];
           nix = [ "nixfmt-rfc-style" ];
           markdown = {
@@ -146,6 +150,12 @@
           };
           stylua = {
             command = "${lib.getExe pkgs.stylua}";
+          };
+          rustfmt = {
+            command = "${lib.getExe pkgs.rustfmt}";
+          };
+          clang_format = {
+            command = "${lib.getExe' pkgs.clang-tools "clang-format"}";
           };
           shellcheck = {
             command = "${lib.getExe pkgs.shellcheck}";
