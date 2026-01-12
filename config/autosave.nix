@@ -1,6 +1,6 @@
 {
   plugins.auto-save = {
-    enable = true;
+    enable = false;
     autoLoad = true;
     #testsave
   };

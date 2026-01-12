@@ -9,7 +9,6 @@
       # lua
       ''
         local slow_format_filetypes = {}
-        vim.g.disable_autoformat = true
 
         vim.api.nvim_create_user_command("FormatDisable", function(args)
            if args.bang then
