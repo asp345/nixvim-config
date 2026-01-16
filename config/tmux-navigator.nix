@@ -1,6 +1,6 @@
 {
-	plugins.tmux-navigator = {
-		enable = true;
-		autoLoad = true;
-	};
+  plugins.tmux-navigator = {
+    enable = true;
+    autoLoad = true;
+  };
 }

@@ -14,7 +14,10 @@
         };
         debugpy = {
           command = "${pkgs.python3Packages.debugpy}/bin/python";
-          args = [ "-m" "debugpy.adapter" ];
+          args = [
+            "-m"
+            "debugpy.adapter"
+          ];
         };
       };
       servers = {
@@ -22,7 +25,10 @@
           port = 13000;
           executable = {
             command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
-            args = [ "--port" "13000" ];
+            args = [
+              "--port"
+              "13000"
+            ];
           };
         };
       };
@@ -135,13 +141,53 @@
   };
 
   keymaps = [
-    { mode = "n"; key = "<leader>db"; action = "<cmd>DapToggleBreakpoint<cr>"; options.desc = "Toggle breakpoint"; }
-    { mode = "n"; key = "<leader>dc"; action = "<cmd>DapContinue<cr>"; options.desc = "Continue"; }
-    { mode = "n"; key = "<leader>di"; action = "<cmd>DapStepInto<cr>"; options.desc = "Step into"; }
-    { mode = "n"; key = "<leader>do"; action = "<cmd>DapStepOver<cr>"; options.desc = "Step over"; }
-    { mode = "n"; key = "<leader>dO"; action = "<cmd>DapStepOut<cr>"; options.desc = "Step out"; }
-    { mode = "n"; key = "<leader>dr"; action = "<cmd>DapToggleRepl<cr>"; options.desc = "Toggle REPL"; }
-    { mode = "n"; key = "<leader>dt"; action = "<cmd>DapTerminate<cr>"; options.desc = "Terminate"; }
-    { mode = "n"; key = "<leader>du"; action.__raw = "function() require('dapui').toggle() end"; options.desc = "Toggle DAP UI"; }
+    {
+      mode = "n";
+      key = "<leader>db";
+      action = "<cmd>DapToggleBreakpoint<cr>";
+      options.desc = "Toggle breakpoint";
+    }
+    {
+      mode = "n";
+      key = "<leader>dc";
+      action = "<cmd>DapContinue<cr>";
+      options.desc = "Continue";
+    }
+    {
+      mode = "n";
+      key = "<leader>di";
+      action = "<cmd>DapStepInto<cr>";
+      options.desc = "Step into";
+    }
+    {
+      mode = "n";
+      key = "<leader>do";
+      action = "<cmd>DapStepOver<cr>";
+      options.desc = "Step over";
+    }
+    {
+      mode = "n";
+      key = "<leader>dO";
+      action = "<cmd>DapStepOut<cr>";
+      options.desc = "Step out";
+    }
+    {
+      mode = "n";
+      key = "<leader>dr";
+      action = "<cmd>DapToggleRepl<cr>";
+      options.desc = "Toggle REPL";
+    }
+    {
+      mode = "n";
+      key = "<leader>dt";
+      action = "<cmd>DapTerminate<cr>";
+      options.desc = "Terminate";
+    }
+    {
+      mode = "n";
+      key = "<leader>du";
+      action.__raw = "function() require('dapui').toggle() end";
+      options.desc = "Toggle DAP UI";
+    }
   ];
 }

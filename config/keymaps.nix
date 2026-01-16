@@ -13,7 +13,10 @@
     }
     {
       key = "<leader>cf";
-      mode = [ "n" "v" ];
+      mode = [
+        "n"
+        "v"
+      ];
       action = "<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<CR>";
       options.desc = "Format buffer";
     }

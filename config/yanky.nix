@@ -1,6 +1,6 @@
 {
-	plugins.yanky = {
-		enable = true;
-		autoLoad = true;
-	};
+  plugins.yanky = {
+    enable = true;
+    autoLoad = true;
+  };
 }
