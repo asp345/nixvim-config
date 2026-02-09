@@ -91,6 +91,15 @@
               name = "Ripgrep";
               module = "blink-ripgrep";
               score_offset = 1;
+              async = true;
+              min_keyword_length = 5;
+              opts = {
+                prefix_min_len = 5;
+                additional_rg_options = [
+                  "--max-count" "5"
+                  "--max-filesize" "1M"
+                ];
+              };
             };
             dictionary = {
               name = "Dict";
