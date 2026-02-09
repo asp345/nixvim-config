@@ -27,9 +27,9 @@
           installCargo = true;
           installRustc = true;
         };
-        superhtml = {
-          enable = true;
-        };
+        # superhtml = {
+        #   enable = true;
+        # };
         sqls = {
           enable = true;
         };
