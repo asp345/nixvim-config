@@ -69,7 +69,7 @@
       fd
       # Formatters
       stylua # Lua formatter
-      nixfmt-rfc-style # Nix formatter
+      nixfmt # Nix formatter
       # Linters
       golangci-lint # Go linter
       shellcheck # Shell script linter
