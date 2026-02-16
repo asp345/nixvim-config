@@ -10,7 +10,7 @@
       enable = true;
     };
     lsp-format = {
-      enable = true;
+      enable = false;
     };
     helm = {
       enable = true;
