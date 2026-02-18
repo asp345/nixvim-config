@@ -1,8 +1,7 @@
 { pkgs, ... }:
 {
   clipboard = {
-    # Use system clipboard
-    register = "unnamedplus";
+    register = "unnamed";
 
     providers.wl-copy.enable = pkgs.stdenv.hostPlatform.isLinux;
   };
