@@ -40,6 +40,9 @@
         marksman = {
           enable = true;
         };
+        pyright = {
+          enable = true;
+        };
         ruff = {
           enable = true;
         };
