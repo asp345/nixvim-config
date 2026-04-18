@@ -49,6 +49,7 @@
       number = true;
       colorcolumn = "80";
       relativenumber = true;
+      cmdheight = 0;
       expandtab = true;
       softtabstop = 2;
       shiftwidth = 2;
