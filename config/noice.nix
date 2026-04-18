@@ -3,6 +3,10 @@
     enable = true;
     autoLoad = true;
     settings = {
+      cmdline = {
+        enabled = true;
+        view = "cmdline_popup";
+      };
       messages = {
         enabled = false;
       };

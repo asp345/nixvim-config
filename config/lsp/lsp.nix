@@ -33,6 +33,9 @@
         };
         nil_ls = {
           enable = true;
+          settings = {
+            nix.flake.autoArchive = true;
+          };
         };
         ts_ls = {
           enable = true;
