@@ -47,7 +47,7 @@
 
     opts = {
       number = true;
-      colorcolumn = "80";
+      background = "dark";
       relativenumber = true;
       cmdheight = 0;
       expandtab = true;
