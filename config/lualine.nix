@@ -4,7 +4,7 @@
     enable = true;
     settings = {
       options = {
-        theme = "ocean-dweller";
+        theme = "lake-dweller";
       };
     };
   };
