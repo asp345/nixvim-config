@@ -1,7 +1,6 @@
 { ... }:
 {
-  colorschemes.nightfox = {
+  colorschemes.oxocarbon = {
     enable = true;
-    flavor = "carbonfox";
   };
 }
