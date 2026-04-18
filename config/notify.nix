@@ -1,7 +1,7 @@
 {
   plugins.notify = {
-    enable = true;
-    autoLoad = true;
+    enable = false;
+    autoLoad = false;
     settings = {
       settings = {
         background_colour = "#000000";
@@ -20,7 +20,7 @@
         render = "default";
         stages = "fade_in_slide_out";
         timeout = 5000;
-        top_down = true;
+        top_down = false;
       };
     };
   };
