@@ -1,7 +1,7 @@
 { ... }:
 {
   colorschemes = {
-    oxocarbon = {
+    kanagawa = {
       enable = true;
     };
   };
