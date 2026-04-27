@@ -2,7 +2,7 @@
   description = "Personal nixvim configuration";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     nixvim.url = "github:nix-community/nixvim";
   };
 
