@@ -21,6 +21,11 @@
             "show_documentation"
             "hide_documentation"
           ];
+          "<C-l>" = [
+            "show"
+            "show_documentation"
+            "hide_documentation"
+          ];
           "<C-e>" = [
             "hide"
             "fallback"
@@ -82,7 +87,6 @@
             "emoji"
             "git"
             "spell"
-            "ripgrep"
           ];
           providers = {
             ripgrep = {
