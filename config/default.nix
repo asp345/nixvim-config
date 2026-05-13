@@ -12,14 +12,11 @@
     ./snacks.nix
     ./gitsigns.nix
     ./whichkey.nix
-    ./hlchunk.nix
-    ./yanky.nix
     ./autopairs.nix
     ./blink-cmp.nix
     ./tmux-navigator.nix
     ./smear-cursor.nix
     ./lsp/conform.nix
-    ./lsp/fidget.nix
     ./lsp/lsp.nix
     ./lsp/dap.nix
     ./nix-develop.nix
@@ -41,6 +38,10 @@
   ];
 
   config = {
+    extraConfigLua = ''
+      vim.opt.shortmess:append("I")
+    '';
+
     globals = {
       mapleader = " ";
     };
@@ -61,14 +62,13 @@
       hlsearch = false;
       incsearch = true;
       termguicolors = true;
-      scrolloff = 8;
+      scrolloff = 4;
       signcolumn = "yes";
       updatetime = 50;
       foldlevelstart = 99;
     };
     extraPackages = with pkgs; [
       # base
-      nerd-fonts.jetbrains-mono # Font
       fzf
       ripgrep
       fd
@@ -83,7 +83,6 @@
       asm-lsp # Assembly LSP
       delve # Go debugger
       gcc
-
     ];
   };
 }

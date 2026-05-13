@@ -28,7 +28,7 @@ nix profile install github:asp345/nixvim-config
 
 The active configuration is split into small modules under `config/` and currently centers on:
 
-- `snacks.nvim` for the dashboard, picker, explorer, and LSP navigation pickers
+- `snacks.nvim` for the picker, explorer, and LSP navigation pickers
 - `blink.cmp` for completion
 - `nvim-treesitter` for syntax highlighting and indentation
 - `nvim-lspconfig` through nixvim's `plugins.lsp`
