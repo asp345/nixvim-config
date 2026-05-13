@@ -12,43 +12,7 @@
         top_down = false;
       };
       dashboard = {
-        sections = [
-          {
-            icon = " ";
-            title = "Keymaps\n";
-            section = "keys";
-            indent = 2;
-            gap = 1;
-            padding = 1;
-          }
-          {
-            icon = " ";
-            title = "Find Files\n";
-            __unkeyed-1.__raw = "require('snacks').dashboard.sections.recent_files({cwd = true})";
-            gap = 1;
-            padding = 1;
-            indent = 2;
-          }
-          {
-            icon = " ";
-            title = "Projects\n";
-            section = "projects";
-            gap = 1;
-            padding = 1;
-            indent = 2;
-          }
-          {
-            pane = 1;
-            icon = " ";
-            desc = "Browse Repo";
-            padding = 1;
-            key = "b";
-            action.__raw = ''
-              function()
-                Snacks.gitbrowse()
-              end'';
-          }
-        ];
+        enabled = false;
       };
     };
   };
