@@ -4,13 +4,31 @@
     autoLoad = true;
     settings = {
       attach_mode = "global";
-      backends = [
-        "treesitter"
-        "lsp"
-        "markdown"
-        "man"
-      ];
+      backends = {
+        _ = [
+          "treesitter"
+          "lsp"
+          "markdown"
+          "man"
+        ];
+        nix = [
+          "lsp"
+        ];
+      };
       disable_max_lines = 5000;
+      filter_kind = {
+        _ = [
+          "Class"
+          "Constructor"
+          "Enum"
+          "Function"
+          "Interface"
+          "Module"
+          "Method"
+          "Struct"
+        ];
+        nix = false;
+      };
       highlight_on_hover = true;
       ignore = {
         filetypes = [

@@ -22,7 +22,6 @@
     ./nix-develop.nix
     ./aerial.nix
     ./notify.nix
-    ./navic.nix
     ./noice.nix
     ./neoscroll.nix
     ./zen-mode.nix
