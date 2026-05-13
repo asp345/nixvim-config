@@ -15,6 +15,14 @@
         theme = "auto";
       };
       sections = {
+        lualine_c = [
+          "filename"
+          {
+            __unkeyed-1 = "aerial";
+            depth = -1;
+            exact = false;
+          }
+        ];
         lualine_x = [
           "encoding"
           {
