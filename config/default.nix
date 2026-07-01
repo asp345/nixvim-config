@@ -21,7 +21,6 @@
     ./lsp/dap.nix
     ./nix-develop.nix
     ./aerial.nix
-    ./notify.nix
     ./noice.nix
     ./neoscroll.nix
     ./zen-mode.nix

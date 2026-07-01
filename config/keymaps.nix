@@ -13,7 +13,7 @@
         "n"
         "v"
       ];
-      action = "<cmd>lua require('conform').format({ async = true, lsp_fallback = true })<CR>";
+      action = "<cmd>lua require('conform').format({ async = true, lsp_format = 'fallback' })<CR>";
       options.desc = "Format buffer";
     }
   ];
