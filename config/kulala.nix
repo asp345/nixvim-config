@@ -60,20 +60,21 @@
         };
       };
 
-      additional_curl_options = { };
       debug = false;
       default_env = "dev";
-      default_view = "body";
       environment_scope = "b";
-      display_mode = "split";
-      split_direction = "vertical";
-      icons = {
-        inlay = {
-          done = "✅";
-          error = "❌";
-          loading = "⏳";
+      ui = {
+        default_view = "body";
+        display_mode = "split";
+        split_direction = "vertical";
+        icons = {
+          inlay = {
+            done = "✅";
+            error = "❌";
+            loading = "⏳";
+          };
+          lualine = "🐼";
         };
-        lualine = "🐼";
       };
     };
   };
