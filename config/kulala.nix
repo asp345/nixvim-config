@@ -33,9 +33,6 @@
             "."
           ];
           ft = "json";
-          pathresolver = {
-            __raw = "require('kulala.parser.jsonpath').parse";
-          };
         };
         "application/xml" = {
           formatter = [
