@@ -25,7 +25,7 @@
     ./neoscroll.nix
     ./zen-mode.nix
     ./yazi.nix
-    ./kulala.nix
+    # ./kulala.nix
     ./wtf.nix
     # ./windsurf-vim.nix if you want to use this plugin uncomment it and run nix develop --impure
     ./ts-comments.nix
