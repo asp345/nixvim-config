@@ -1,10 +1,23 @@
 {
-  lib,
   pkgs,
   ...
 }:
 {
   config = {
+    extraPackagesAfter = with pkgs; [
+      black
+      isort
+      nixfmt
+      prettierd
+      stylua
+      rustfmt
+      clang-tools
+      shellcheck
+      shfmt
+      shellharden
+      bicep
+    ];
+
       extraConfigLuaPre =
         # lua
         ''
@@ -127,51 +140,6 @@
           ];
           json = [ "jq" ];
           "_" = [ "trim_whitespace" ];
-        };
-
-        formatters = {
-          black = {
-            command = "${lib.getExe pkgs.black}";
-          };
-          isort = {
-            command = "${lib.getExe pkgs.isort}";
-          };
-          nixfmt = {
-            command = "${lib.getExe pkgs.nixfmt}";
-          };
-          alejandra = {
-            command = "${lib.getExe pkgs.alejandra}";
-          };
-          jq = {
-            command = "${lib.getExe pkgs.jq}";
-          };
-          prettierd = {
-            command = "${lib.getExe pkgs.prettierd}";
-          };
-          stylua = {
-            command = "${lib.getExe pkgs.stylua}";
-          };
-          rustfmt = {
-            command = "${lib.getExe pkgs.rustfmt}";
-          };
-          clang_format = {
-            command = "${lib.getExe' pkgs.clang-tools "clang-format"}";
-          };
-          shellcheck = {
-            command = "${lib.getExe pkgs.shellcheck}";
-          };
-          shfmt = {
-            command = "${lib.getExe pkgs.shfmt}";
-          };
-          shellharden = {
-            command = "${lib.getExe pkgs.shellharden}";
-          };
-          bicep = {
-            command = "${lib.getExe pkgs.bicep}";
-          };
-          #yamlfmt = {
-          #  command = "${lib.getExe pkgs.yamlfmt}";
-          #};
         };
       };
     };

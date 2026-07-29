@@ -1,9 +1,8 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   clipboard = {
     register = "unnamed";
-
-    providers.wl-copy.enable = pkgs.stdenv.hostPlatform.isLinux;
   };
 
+  extraPackagesAfter = lib.optional pkgs.stdenv.hostPlatform.isLinux pkgs.wl-clipboard;
 }

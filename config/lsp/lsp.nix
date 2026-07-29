@@ -16,55 +16,69 @@
       servers = {
         clangd = {
           enable = true;
+          packageFallback = true;
         };
         rust_analyzer = {
           enable = true;
+          packageFallback = true;
           installCargo = true;
           installRustc = true;
+          installRustfmt = false;
         };
         # superhtml = {
         #   enable = true;
         # };
         sqls = {
           enable = true;
+          packageFallback = true;
         };
         lua_ls = {
           enable = true;
+          packageFallback = true;
         };
         nil_ls = {
           enable = true;
+          packageFallback = true;
           settings = {
             nix.flake.autoArchive = true;
           };
         };
         ts_ls = {
           enable = true;
+          packageFallback = true;
         };
         marksman = {
           enable = true;
+          packageFallback = true;
         };
         pyright = {
           enable = true;
+          packageFallback = true;
         };
         ruff = {
           enable = true;
+          packageFallback = true;
         };
         gopls = {
           enable = true;
+          packageFallback = true;
         };
         terraformls = {
           enable = true;
+          packageFallback = true;
         };
         jsonls = {
           enable = true;
+          packageFallback = true;
         };
         helm_ls = {
           enable = true;
+          packageFallback = true;
           extraOptions = {
             settings = {
               "helm_ls" = {
                 yamlls = {
-                  path = "${pkgs.yaml-language-server}/bin/yaml-language-server";
+                  path = "yaml-language-server";
                 };
               };
             };
@@ -72,6 +86,7 @@
         };
         yamlls = {
           enable = true;
+          packageFallback = true;
           extraOptions = {
             settings = {
               yaml = {
