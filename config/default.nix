@@ -65,22 +65,17 @@
       updatetime = 50;
       foldlevelstart = 99;
     };
-    extraPackages = with pkgs; [
-      # base
-      fzf
-      ripgrep
-      fd
-      # Formatters
-      stylua # Lua formatter
-      nixfmt # Nix formatter
-      # Linters
-      golangci-lint # Go linter
-      shellcheck # Shell script linter
-      eslint_d # JavaScript/TypeScript linter
-      # Debuggers
-      asm-lsp # Assembly LSP
-      delve # Go debugger
-      gcc
+    extraPackagesAfter = with pkgs; [
+      ripgrep # snacks.picker.grep, blink-ripgrep
+      fd # snacks.picker.files
     ];
+
+    dependencies = {
+      direnv.packageFallback = true;
+      git.packageFallback = true;
+      go.packageFallback = true;
+      lazygit.packageFallback = true;
+      yazi.packageFallback = true;
+    };
   };
 }

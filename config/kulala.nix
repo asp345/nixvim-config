@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  extraPackages = with pkgs; [
+  extraPackagesAfter = with pkgs; [
     curl
     grpcurl
     libxml2
