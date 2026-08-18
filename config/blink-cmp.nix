@@ -185,7 +185,10 @@
         };
         completion = {
           list = {
-            selection = "manual";
+            selection = {
+              preselect = false;
+              auto_insert = false;
+            };
           };
           menu = {
             border = "rounded";
