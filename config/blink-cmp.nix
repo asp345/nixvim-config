@@ -184,6 +184,9 @@
           };
         };
         completion = {
+          list = {
+            selection = "manual";
+          };
           menu = {
             border = "rounded";
             draw = {
