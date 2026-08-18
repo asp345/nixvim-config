@@ -8,11 +8,7 @@
         view = "cmdline_popup";
       };
       messages = {
-        enabled = true;
-        view = "mini";
-        view_error = "mini";
-        view_warn = "mini";
-        view_search = "mini";
+        enabled = false;
       };
       notify = {
         enabled = true;
