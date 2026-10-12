@@ -43,7 +43,7 @@
             nix.flake.autoArchive = true;
           };
         };
-        ts_ls = {
+        tsc = {
           enable = true;
           packageFallback = true;
         };
