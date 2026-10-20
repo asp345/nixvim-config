@@ -15,7 +15,6 @@
       shellcheck
       shfmt
       shellharden
-      bicep
     ];
 
       extraConfigLuaPre =
@@ -132,7 +131,6 @@
             stop_after_first = true;
           };
           terraform = [ "terraform_fmt" ];
-          bicep = [ "bicep" ];
           bash = [
             "shellcheck"
             "shellharden"
