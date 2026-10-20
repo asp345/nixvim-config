@@ -17,9 +17,9 @@
       shellharden
     ];
 
-      extraConfigLuaPre =
-        # lua
-        ''
+    extraConfigLuaPre =
+      # lua
+      ''
           local slow_format_filetypes = {}
           vim.g.disable_autoformat = true
 

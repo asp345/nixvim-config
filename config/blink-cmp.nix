@@ -98,8 +98,10 @@
               opts = {
                 prefix_min_len = 5;
                 additional_rg_options = [
-                  "--max-count" "5"
-                  "--max-filesize" "1M"
+                  "--max-count"
+                  "5"
+                  "--max-filesize"
+                  "1M"
                 ];
               };
             };
