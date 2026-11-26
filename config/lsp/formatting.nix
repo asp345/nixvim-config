@@ -10,7 +10,6 @@
     rustfmt
     shellcheck
     shfmt
-    shellharden
   ];
 
   plugins.conform-nvim = {
@@ -34,11 +33,7 @@
       markdown = [ "mdformat" ];
       yaml = [ "yamlfmt" ];
       terraform = [ "terraform_fmt" ];
-      bash = [
-        "shellcheck"
-        "shellharden"
-        "shfmt"
-      ];
+      sh = [ "shfmt" ];
       json = [ "biome" ];
       jsonc = [ "biome" ];
       "_" = [ "trim_whitespace" ];

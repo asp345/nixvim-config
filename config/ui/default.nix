@@ -2,37 +2,16 @@
   imports = [
     ./aerial.nix
     ./bufferline.nix
-    ./lualine.nix
-    ./noice.nix
     ./snacks.nix
     ./zen-mode.nix
   ];
 
-  colorschemes.moonfly = {
-    enable = true;
-    settings.Transparent = true;
-  };
+  colorschemes.moonfly.enable = true;
   plugins = {
-    neoscroll.enable = true;
-    smear-cursor = {
+    lualine.enable = true;
+    noice = {
       enable = true;
-      settings = {
-        distance_stop_animating = 0.5;
-        hide_target_hack = false;
-        stiffness = 0.8;
-        trailing_stiffness = 0.5;
-      };
-    };
-    timerly = {
-      enable = true;
-      settings.minutes = [
-        5
-        10
-        15
-        20
-        25
-        30
-      ];
+      settings.messages.enabled = false;
     };
     web-devicons = {
       enable = true;

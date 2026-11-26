@@ -11,19 +11,6 @@
 
   plugins.kulala = {
     enable = true;
-    luaConfig.post = ''
-      vim.api.nvim_create_user_command("SendRequest", function()
-        require("kulala").run()
-      end, {})
-
-      vim.api.nvim_create_user_command("SendAllRequests", function()
-        require("kulala").run_all()
-      end, {})
-
-      vim.api.nvim_create_user_command("OpenScratchpad", function()
-        require("kulala").scratchpad()
-      end, {})
-    '';
     settings = {
       contenttypes = {
         "application/json" = {
@@ -58,23 +45,8 @@
           pathresolver = [ ];
         };
       };
-
       debug = false;
       default_env = "dev";
-      environment_scope = "b";
-      ui = {
-        default_view = "body";
-        display_mode = "split";
-        split_direction = "vertical";
-        icons = {
-          inlay = {
-            done = "✅";
-            error = "❌";
-            loading = "⏳";
-          };
-          lualine = "🐼";
-        };
-      };
     };
   };
   keymaps = [
@@ -84,7 +56,8 @@
         "n"
         "v"
       ];
-      action = "<cmd>SendRequest<CR>";
+      action.__raw = "function() require('kulala').run() end";
+      options.desc = "Send request";
     }
     {
       key = "<leader>Ra";
@@ -92,7 +65,8 @@
         "n"
         "v"
       ];
-      action = "<cmd>SendAllRequests<CR>";
+      action.__raw = "function() require('kulala').run_all() end";
+      options.desc = "Send all requests";
     }
     {
       key = "<leader>Rb";
@@ -100,7 +74,8 @@
         "n"
         "v"
       ];
-      action = "<cmd>OpenScratchpad<CR>";
+      action.__raw = "function() require('kulala').scratchpad() end";
+      options.desc = "Open scratchpad";
     }
   ];
 }

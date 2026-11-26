@@ -1,6 +1,5 @@
 {
   imports = [
-    ./gitsigns.nix
     ./lazygit.nix
     ./kulala.nix
     ./toggleterm.nix
@@ -10,6 +9,7 @@
 
   plugins = {
     direnv.enable = true;
+    gitsigns.enable = true;
     nix-develop.enable = true;
     tmux-navigator.enable = true;
   };

@@ -1,17 +1,7 @@
 {
-  plugins = {
-    bufferline = {
-      enable = true;
-      settings = {
-        options = {
-          diagnostics = "nvim_lsp";
-
-          close_icon = " ";
-          buffer_close_icon = "󰱝 ";
-          modified_icon = "󰔯 ";
-        };
-      };
-    };
+  plugins.bufferline = {
+    enable = true;
+    settings.options.diagnostics = "nvim_lsp";
   };
 
   keymaps = [

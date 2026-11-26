@@ -22,18 +22,6 @@
       options.desc = "Smart Find Files";
     }
     {
-      key = "<leader>,";
-      mode = [ "n" ];
-      action = "<cmd>lua Snacks.picker.buffers()<CR>";
-      options.desc = "Buffers";
-    }
-    {
-      key = "<leader>/";
-      mode = [ "n" ];
-      action = "<cmd>lua Snacks.picker.grep()<CR>";
-      options.desc = "Grep";
-    }
-    {
       key = "<leader>:";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.command_history()<CR>";

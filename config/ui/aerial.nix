@@ -16,7 +16,6 @@
       };
       disable_max_lines = 5000;
       filter_kind.nix = false;
-      highlight_on_hover = true;
       ignore = {
         filetypes = [
           "gomod"

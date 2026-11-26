@@ -1,20 +1,10 @@
 {
   plugins = {
-    blink-cmp-dictionary.enable = true;
     blink-cmp-git.enable = true;
-    blink-cmp-spell.enable = true;
-    blink-emoji.enable = true;
     blink-cmp = {
       enable = true;
-      setupLspCapabilities = true;
-
       settings = {
         keymap = {
-          "<C-space>" = [
-            "show"
-            "show_documentation"
-            "hide_documentation"
-          ];
           "<C-l>" = [
             "show"
             "show_documentation"
@@ -38,14 +28,6 @@
             "snippet_backward"
             "fallback"
           ];
-          "<Up>" = [
-            "select_prev"
-            "fallback"
-          ];
-          "<Down>" = [
-            "select_next"
-            "fallback"
-          ];
           "<C-p>" = [
             "select_prev"
             "fallback"
@@ -63,41 +45,17 @@
             "fallback"
           ];
         };
-        signature = {
-          enabled = true;
-          window = {
-            border = "rounded";
-          };
-        };
-
+        signature.enabled = true;
         sources = {
           default = [
             "buffer"
             "lsp"
             "path"
             "snippets"
-            "dictionary"
-            "emoji"
             "git"
-            "spell"
           ];
           providers = {
-            dictionary = {
-              name = "Dict";
-              module = "blink-cmp-dictionary";
-              min_keyword_length = 3;
-            };
-            emoji = {
-              name = "Emoji";
-              module = "blink-emoji";
-              score_offset = 1;
-            };
             lsp.score_offset = 4;
-            spell = {
-              name = "Spell";
-              module = "blink-cmp-spell";
-              score_offset = 1;
-            };
             git = {
               name = "Git";
               module = "blink-cmp-git";
@@ -108,99 +66,18 @@
                   return vim.o.filetype == 'gitcommit' or vim.o.filetype == 'markdown'
                 end
               '';
-              opts = {
-                git_centers = {
-                  github = {
-                    issue = {
-                      on_error.__raw = "function(_,_) return true end";
-                    };
-                  };
-                };
-              };
+              opts.git_centers.github.issue.on_error.__raw = "function(_,_) return true end";
             };
-          };
-        };
-
-        appearance = {
-          nerd_font_variant = "mono";
-          kind_icons = {
-            Text = "󰉿";
-            Method = "";
-            Function = "󰊕";
-            Constructor = "󰒓";
-
-            Field = "󰜢";
-            Variable = "󰆦";
-            Property = "󰖷";
-
-            Class = "󱡠";
-            Interface = "󱡠";
-            Struct = "󱡠";
-            Module = "󰅩";
-
-            Unit = "󰪚";
-            Value = "󰦨";
-            Enum = "󰦨";
-            EnumMember = "󰦨";
-
-            Keyword = "󰻾";
-            Constant = "󰏿";
-
-            Snippet = "󱄽";
-            Color = "󰏘";
-            File = "󰈔";
-            Reference = "󰬲";
-            Folder = "󰉋";
-            Event = "󱐋";
-            Operator = "󰪚";
-            TypeParameter = "󰬛";
-            Error = "󰏭";
-            Warning = "󰏯";
-            Information = "󰏮";
-            Hint = "󰏭";
-
-            Emoji = "🤶";
           };
         };
         completion = {
-          list = {
-            selection = {
-              preselect = false;
-              auto_insert = false;
-            };
+          list.selection = {
+            preselect = false;
+            auto_insert = false;
           };
-          menu = {
-            border = "rounded";
-            draw = {
-              gap = 1;
-              treesitter = [ "lsp" ];
-              columns = [
-                {
-                  __unkeyed-1 = "label";
-                }
-                {
-                  __unkeyed-1 = "kind_icon";
-                  __unkeyed-2 = "kind";
-                  gap = 1;
-                }
-                { __unkeyed-1 = "source_name"; }
-              ];
-            };
-          };
-          trigger = {
-            show_in_snippet = false;
-          };
-          documentation = {
-            auto_show = true;
-            window = {
-              border = "rounded";
-            };
-          };
-          accept = {
-            auto_brackets = {
-              enabled = false;
-            };
-          };
+          trigger.show_in_snippet = false;
+          documentation.auto_show = true;
+          accept.auto_brackets.enabled = false;
         };
       };
     };
