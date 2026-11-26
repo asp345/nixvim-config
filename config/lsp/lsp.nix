@@ -32,22 +32,35 @@
           enable = true;
           packageFallback = true;
         };
+        bashls = {
+          enable = true;
+          packageFallback = true;
+        };
+        biome = {
+          enable = true;
+          packageFallback = true;
+        };
         lua_ls = {
           enable = true;
           packageFallback = true;
         };
-        nil_ls = {
+        nixd = {
           enable = true;
           packageFallback = true;
-          settings = {
-            nix.flake.autoArchive = true;
-          };
+        };
+        taplo = {
+          enable = true;
+          packageFallback = true;
         };
         tsc = {
           enable = true;
           packageFallback = true;
         };
         marksman = {
+          enable = true;
+          packageFallback = true;
+        };
+        texlab = {
           enable = true;
           packageFallback = true;
         };

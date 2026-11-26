@@ -8,7 +8,8 @@
       black
       isort
       nixfmt
-      prettierd
+      mdformat
+      yamlfmt
       stylua
       rustfmt
       clang-tools
@@ -91,26 +92,12 @@
         '';
         notify_on_error = true;
         formatters_by_ft = {
-          html = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          css = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          javascript = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          typescript = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
+          html = [ "biome" ];
+          css = [ "biome" ];
+          javascript = [ "biome" ];
+          javascriptreact = [ "biome" ];
+          typescript = [ "biome" ];
+          typescriptreact = [ "biome" ];
           python = [
             "black"
             "isort"
@@ -120,23 +107,16 @@
           c = [ "clang_format" ];
           lua = [ "stylua" ];
           nix = [ "nixfmt" ];
-          markdown = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
-          yaml = {
-            __unkeyed-1 = "prettierd";
-            __unkeyed-2 = "prettier";
-            stop_after_first = true;
-          };
+          markdown = [ "mdformat" ];
+          yaml = [ "yamlfmt" ];
           terraform = [ "terraform_fmt" ];
           bash = [
             "shellcheck"
             "shellharden"
             "shfmt"
           ];
-          json = [ "jq" ];
+          json = [ "biome" ];
+          jsonc = [ "biome" ];
           "_" = [ "trim_whitespace" ];
         };
       };
