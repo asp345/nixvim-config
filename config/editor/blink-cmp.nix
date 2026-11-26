@@ -1,15 +1,9 @@
-{ pkgs, ... }:
 {
-  extraPlugins = with pkgs.vimPlugins; [
-    blink-ripgrep-nvim
-  ];
-
   plugins = {
     blink-cmp-dictionary.enable = true;
     blink-cmp-git.enable = true;
     blink-cmp-spell.enable = true;
     blink-emoji.enable = true;
-    blink-ripgrep.enable = true;
     blink-cmp = {
       enable = true;
       setupLspCapabilities = true;
@@ -82,29 +76,12 @@
             "lsp"
             "path"
             "snippets"
-            # Community
             "dictionary"
             "emoji"
             "git"
             "spell"
           ];
           providers = {
-            ripgrep = {
-              name = "Ripgrep";
-              module = "blink-ripgrep";
-              score_offset = 1;
-              async = true;
-              min_keyword_length = 5;
-              opts = {
-                prefix_min_len = 5;
-                additional_rg_options = [
-                  "--max-count"
-                  "5"
-                  "--max-filesize"
-                  "1M"
-                ];
-              };
-            };
             dictionary = {
               name = "Dict";
               module = "blink-cmp-dictionary";

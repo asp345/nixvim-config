@@ -1,7 +1,6 @@
 {
   plugins.yazi = {
     enable = true;
-    autoLoad = true;
     settings = {
       log_level = "debug";
       open_for_directories = true;

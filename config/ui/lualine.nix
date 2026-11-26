@@ -12,7 +12,6 @@
           left = "";
           right = "";
         };
-        theme = "auto";
       };
       sections = {
         lualine_c = [

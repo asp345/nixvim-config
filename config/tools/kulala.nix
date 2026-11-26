@@ -24,7 +24,6 @@
         require("kulala").scratchpad()
       end, {})
     '';
-    autoLoad = true;
     settings = {
       contenttypes = {
         "application/json" = {

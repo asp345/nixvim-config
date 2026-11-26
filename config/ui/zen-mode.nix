@@ -1,7 +1,6 @@
 {
   plugins.zen-mode = {
     enable = true;
-    autoLoad = true;
     settings = {
       window = {
         backdrop = 0.95;
@@ -17,7 +16,6 @@
         };
         twilight.enabled = false;
         gitsigns.enabled = true;
-        tmux.enabled = false;
       };
     };
   };

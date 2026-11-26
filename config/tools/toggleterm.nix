@@ -11,9 +11,6 @@
       };
       open_mapping = "[[<c-t>]]";
       autochdir = true;
-      auto_scroll = true;
-      close_on_exit = true;
-      insert_mappings = true;
       shell = "zsh";
     };
   };

@@ -1,16 +1,14 @@
+{ pkgs, ... }:
 {
-  ...
-}:
-{
+  extraPackagesAfter = with pkgs; [
+    ripgrep
+    fd
+  ];
+
   plugins.snacks = {
     enable = true;
-    autoLoad = true;
     settings = {
-      notifier = {
-        enabled = false;
-        style = "compact";
-        top_down = false;
-      };
+      notifier.enabled = false;
       dashboard = {
         enabled = false;
       };
@@ -165,56 +163,48 @@
       options.desc = "Rename";
     }
     {
-      # Goto Definition
       key = "gd";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_definitions()<CR>";
       options.desc = "Goto Definition";
     }
     {
-      # Goto Declaration
       key = "gD";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_declarations()<CR>";
       options.desc = "Goto Declaration";
     }
     {
-      # References
       key = "gr";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_references()<CR>";
       options.desc = "References";
     }
     {
-      # Goto Implementation
       key = "gI";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_implementations()<CR>";
       options.desc = "Goto Implementation";
     }
     {
-      # Goto Type Definition (gy)
       key = "gy";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_type_definitions()<CR>";
       options.desc = "Goto Type Definition";
     }
     {
-      # Incoming Calls
       key = "gai";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_incoming_calls()<CR>";
       options.desc = "Incoming Calls";
     }
     {
-      # Outgoing Calls
       key = "gao";
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_outgoing_calls()<CR>";
       options.desc = "Outgoing Calls";
     }
 
-    # LSP Symbols
     {
       key = "<leader>ss";
       mode = [ "n" ];
@@ -234,7 +224,6 @@
       options.desc = "Buffer Diagnostics";
     }
 
-    # LSP Workspace Symbols
     {
       key = "<leader>sS";
       mode = [ "n" ];

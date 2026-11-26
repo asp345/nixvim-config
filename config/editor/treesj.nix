@@ -1,7 +1,6 @@
 {
   plugins.treesj = {
     enable = true;
-    autoLoad = true;
   };
   keymaps = [
     {
